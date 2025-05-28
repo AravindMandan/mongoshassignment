@@ -193,3 +193,53 @@ db.tasks.find({task_description:"save file"})
   updatedAt: 2025-05-28T10:50:50.033Z,
   Duedate: 2025-05-28T11:21:58.862Z
 }
+
+
+
+db.tasks.find({
+  createdAt: {
+    $gte: new Date(Date.now() - 20 * 60 * 1000)
+  }
+})
+{
+  _id: ObjectId('6836dff71f69bf35c0b38137'),
+  task_status: true,
+  createdAt: 2025-05-28T10:50:50.033Z,
+  updatedAt: 2025-05-28T10:50:50.033Z
+}
+
+{
+  _id: ObjectId('6836e08a1f69bf35c0b38138'),
+  task_description: 'create a file',
+  task_status: true,
+  task_timestamp: 2025-05-28T10:08:10.689Z,
+  createdAt: 2025-05-28T10:50:50.033Z,
+  updatedAt: 2025-05-28T10:50:50.033Z
+}
+
+{
+  _id: ObjectId('6836e0b31f69bf35c0b38139'),
+  task_description: 'Write content',
+  task_status: true,
+  task_timestamp: 2025-05-28T10:08:51.032Z,
+  createdAt: 2025-05-28T10:50:50.033Z,
+  updatedAt: 2025-05-28T10:50:50.033Z
+}
+
+{
+  _id: ObjectId('6836e0c51f69bf35c0b3813a'),
+  task_description: 'save file',
+  task_status: false,
+  task_timestamp: 2025-05-28T10:09:09.471Z,
+  createdAt: 2025-05-28T10:50:50.033Z,
+  updatedAt: 2025-05-28T10:50:50.033Z
+}
+
+{
+  _id: ObjectId('6836e72d1f69bf35c0b3813b'),
+  task_description: 'task done',
+  task_status: true,
+  task_timestamp: 2025-05-28T10:36:29.547Z,
+  createdAt: 2025-05-28T10:50:50.033Z,
+  updatedAt: 2025-05-28T11:09:03.290Z
+}
